@@ -47,7 +47,6 @@ class Board:
             self.fps_clock.tick(30)
 
             for i in moves:
-                print(i[0], "----->", i[1])
                 if (i[0] < i[1] and abs(i[0] - i[1]) == 1):
                     MOVE = 'r'
                 elif (i[0] > i[1] and abs(i[0] - i[1]) == 1):
@@ -160,6 +159,6 @@ class Board:
                 self.drawTile(self.color[self.boardColor[movex][movey]], movex, movey,
                               board[movex][movey], -i, 0)
             pygame.display.update()
-            self.fps_clock.tick(10)
+            self.fps_clock.tick(100)
 
 
